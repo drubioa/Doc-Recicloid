@@ -1,0 +1,37 @@
+% Tipo que representa SOLICITUDES DE RECOGIDA
+
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{TYP-002: SolicitudRecogida}} \\
+\hline
+\textbf{Versión} & 1.0 (31/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+\textbf{Descripción} & Este tipo de objetos representa  \textit{la solicides de recogidas de muebles y enseres realizadas por los usuarios} \\
+\textbf{Supertipo} & - \\
+\textbf{Subtipo} & -  \\
+\textbf{Comentarios} &- \\
+\end{longtable}
+
+% Atributos
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Atributo variable} & SolicitudRecogida::fecha \\
+\textbf{Descripción} & Este atributo representa  \textit{la fecha en la cual se establece la solicitud de recogida.} \\
+\textbf{Tipo} & \textit{String} \\
+\textbf{Comentarios} & - \\
+\end{longtable}
+
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Atributo variable} & SolicitudRecogida::numeroSolicitud \\
+\textbf{Descripción} & Este atributo representa  \textit{el número de solicitud.} \\
+\textbf{Tipo} & \textit{Natural} \\
+\textbf{Comentarios} & Este atributo es identifica y sirve para contabilizar el número de solicitudes realizadas. \\
+\end{longtable}
+
+% Invariantes
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Expresión de invariante} & SolicitudRecogida::UnicidadnumeroSolicitud \\
+\textbf{Descripción} &  \textit{No puede haber dos solicitudes de recogida con el mismo número} \\
+\textbf{Comentarios} & -\\
+\end{longtable}

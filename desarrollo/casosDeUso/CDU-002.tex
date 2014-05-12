@@ -1,0 +1,45 @@
+% CDU-002: Seleccionar punto de recogida
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{CDU-002: Seleccionar punto de recogida}} \\
+\hline
+\textbf{Versión} & 1.0 (26/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+\textbf{Dependencias} & OBJ-001 CDU-001 \\
+% Descripción del caso de uso
+\textbf{Descripción} & El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando \textit{haya que seleccionar una ubicación donde el usuario depositará sus muebles y enseres para que posteriormente sean recogidos por el camión de la empresa de reciclaje.} \\
+\textbf{Frecuencia esperada} & 10 veces al día \\
+\textbf{Precondición} & El terminal móvil del usuario dispone de tecnología GPS funcional y con cobertura. \\
+\textbf{Importancia} & Vital  \\
+\textbf{Comentarios} & Se establece como distancia máxima del domicilio del cliente 300 metros del punto de depósito de los mueble y enseres. Para distancias mayores se remite al usuario a contactar vía telefónica con la empresa de recogida de muebles y enseres. \\
+\end{longtable}
+
+\textbf{Secuencia Normal} 
+\begin{enumerate}
+	\item[1.] El \textit{Sistema} solicita al usuario si desea introducir su dirección manualmente o bien ser geolocalizado mediante el sistema de localización GPS del propio terminal móvil.
+	% Excepción en el paso 2
+	\item[2.] El actor \textit{Usuario (ACT-0001)} introduce indica que desea introducir manualmente el punto de recogida, introduce su calle y número.
+	% Excepción en el paso 3
+	\item[3.] El \textit{Sistema} comprueba si la localización corresponde al término municipal donde se oferta el servicio de recogida de muebles y enseres.
+	\item[4.] El \textit{Sistema} comprueba si el punto de recogida se encuentra a menos de 300 metros del domicilio del usuario y muestra al usuario el punto de recogida más cercano a su domicilio. 
+	\item[5.] El \textit{Sistema} comprueba si la localización corresponde a una zona rural o una zona urbana del término municipal. Es una zona urbana. 
+\end{enumerate}
+
+\textbf{Postcondición: } 
+ Se obtiene el punto donde de recogida donde el usuario depositará los muebles y enseres.\\
+
+\textbf{Excepciones} 
+\begin{enumerate}
+	\item[2a.] El actor \textit{Usuario (ACT-0001)} desea emplear la localización por medio del servicio GPS de su terminal móvil.
+	\begin{enumerate}
+		\item[1.] El Sistema solicita al terminal móvil la ubicación GPS en la cual se encuentra en ese mismo instante.
+		\item[2.] El Sistema obtiene las coordenadas del domicilio del usuario por medio del servicio de localización GPS. Vuelve al paso 3.
+	\end{enumerate}
+	\item[3a.] El \textit{Sistema} comprueba que la localización está fuera del término municipal donde se oferta el servicio de recogida de muebles y enseres.
+	\begin{enumerate}
+		\item[1.] El \textit{Sistema} informa al usuario que actualmente el servicio solo se oferte en dicho término municipal y que no es posible prestarle el servicio. Se finaliza el caso de uso.
+	\end{enumerate}
+	\item[4a.] El \textit{Sistema} comprueba que todos los puntos de recogida están a más de 300 metros del domicilio del usuario que solicita el servicio.
+	\begin{enumerate}
+		\item[1.] El \textit{Sistema} informa al usuario que debe ponerse en contacto con el número de teléfono de la empresa municipal. Se finaliza el caso de uso.
+	\end{enumerate} 	
+\end{enumerate} 

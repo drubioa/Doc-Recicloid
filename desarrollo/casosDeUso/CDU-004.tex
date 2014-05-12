@@ -1,0 +1,22 @@
+% CDU-004: Cancelar petición de recogida
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{CDU-004: Cancelar petición de recogida}} \\
+\hline
+\textbf{Versión} & 1.0 (26/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+\textbf{Dependencias} & OBJ-001 CDU-003 \\
+% Descripción del caso de uso
+\textbf{Descripción} & El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando \textit{un Usuario desee cancelar una solicitud de recogida de muebles y enseres que tiene pendiente para los próximos días.} \\
+\textbf{Frecuencia esperada} & 1 vez al mes  \\
+\textbf{Precondición} & El actor \textit{Usuario (ACT-0001)} ha realizado anteriormente una o varios solicitudes de recogida de mueble y enseres. Dicha solicitud se realizará en una fecha posterior a la fecha del Sistema. \\
+\textbf{Importancia} & Baja  \\
+\textbf{Comentarios} & Sólo se cancelarán las peticiones de recogidas de enseres pendiente, con fechas posteriores a la fecha actual del Sistema. \\
+\end{longtable}
+
+\textbf{Secuencia Normal} 
+\begin{enumerate}
+	\item[1.] El actor \textit{Usuario (ACT-0001)} desea cancelar una petición, anteriormente seleccionada y pendiente de realizar, para que le recojan muebles y enseres.
+	\item[2.] El \textit{Sistema} muestra un mensaje al usuario confirmando la eliminación de la petición de recogida de muebles y enseres.
+	\item[3.] El actor \textit{Usuario (ACT-0001)} confirma su deseo de eliminar la petición.
+	\item[4.] El \textit{Sistema} elimina la petición de recogida de muebles y enseres de los registros de solicitudes y actualiza el histórico de solicitudes de recogida de muebles y enseres.
+\end{enumerate}

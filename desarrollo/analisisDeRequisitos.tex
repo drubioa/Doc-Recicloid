@@ -1,0 +1,73 @@
+\subsection{Catálogo de actores}
+	\input{desarrollo/tablas/ACT-0001.tex}
+	\input{desarrollo/tablas/ACT-0002.tex}
+	
+\subsection{Requisitos funcionales}
+\subsubsection*{Casos de uso del sistema}
+	\begin{figure}[H]
+	\centering
+ 	   \includegraphics[scale=0.50]{diagramaCU1.png} 
+  	  \caption{Diagrama UML del Subsistema aplicación de recogida de muebles y enseres.}
+	\end{figure}	
+	\input{desarrollo/casosDeUso/CDU-001.tex}
+	\input{desarrollo/casosDeUso/CDU-002.tex}
+	\input{desarrollo/casosDeUso/CDU-003.tex}	
+	\input{desarrollo/casosDeUso/CDU-004.tex}
+	\input{desarrollo/casosDeUso/CDU-005.tex}	
+	
+	\begin{figure}[H]
+	\centering
+ 	   \includegraphics[scale=0.50]{diagramaCU2.png} 
+  	  \caption{Diagrama UML del Subsistema de servicio de recogida de muebles y enseres.}
+	\end{figure}	
+
+\subsection{Requisitos de información}
+	\input{desarrollo/tablas/IRQ-0001.tex}
+	\input{desarrollo/tablas/CRQ-001.tex}
+	\input{desarrollo/tablas/IRQ-0002.tex}
+	\input{desarrollo/tablas/CRQ-002.tex}	
+	\input{desarrollo/tablas/IRQ-0003.tex}
+	\input{desarrollo/tablas/CRQ-003.tex}	
+	\input{desarrollo/tablas/IRQ-0004.tex}
+	
+	\newpage
+	\subsubsection*{Diagrama conceptual de clases UML}
+	\begin{figure}[H]
+	\centering
+ 	   \includegraphics[scale=0.70,angle =90]{diaConceptualUML.png} 
+  	  \caption{Diagrama conceptual de clases UML.}
+	\end{figure}
+	
+	\newpage
+	\subsubsection*{Tipos}
+	% Tipo Usuario
+	\input{desarrollo/clases/TYP-001.tex}
+	% Tipo SolicitudRecogida	
+	\input{desarrollo/clases/TYP-002.tex}	
+	% Tipo PuntosDeRecogida	
+	\input{desarrollo/clases/TYP-003.tex}		
+	% Tipo Zonas	
+	\input{desarrollo/clases/TYP-004.tex}
+	% Tipo Enseres	
+	\input{desarrollo/clases/TYP-005.tex}	
+				
+\subsection{Requisitos no funcionales}
+% Descripción de otros requisitos (relacionados con la calidad del software) portabilidad, seguridad, auditoría, monitorización, fiabilidad,% comunicaciones con sistemas externos, extensibilidad, rendimiento, escalabilidad, estándares de obligado cumplimiento, accesibilidad, usabilidad, aspectos de la interfaz de usuario, 
+% utilización de un determinado entorno tecnológico, etc.
+\subsubsection*{Seguridad}
+El servidor donde se almacenarán y procesarán las solicitudes de los usuarios se encuentra ubicado en la Intranet del ayuntamiento. Por seguridad no se debe permitir el acceso directo de la app móvil al servidor, por lo que se hace imprescindible que un servicio se encargue de intermediar entre el servidor y la aplicación del usuario, así como gestionar las diversas peticiones. En todo momento es de vital importancia controlar el aspecto de seguridad en las comunicaciones y conexiones que se establezcan. 
+
+\subsubsection*{Interfaz}
+Para poder maximizar el número de descargas de la aplicación y captar una mayor atención se debe cuidar el aspecto estético. La aplicación que se ofrecerá a la ciudadanía no solo debe ser visualmente atractiva sino identificarse con la empresa y la actividad que realiza. Así mismo, la información debe presentarse de una forma resumida y siempre que sea posible acompañada de un apoyo visual por medio de imágenes o iconografía.
+
+\subsubsection{Usabilidad}
+Se pretende hacer más cómoda  y fácil de realizar una gestión rutinaria como es la notificación de recogida de enseres. Es por ello importante que la aplicación sea sencilla de utilizar, y no presente ningún reto ni dificultad en su maneja. Se espere llegar a usuarios de toda edad y nivel formativo. 
+
+\subsection{Reglas de negocio}
+	\input{desarrollo/reglas-negocio.tex}	
+
+\subsection{Estudio de alternativas tecnológicas}
+% En esta sección, se debe ofrecer un estudio del arte de las diferentes alternativas tecnológicas que permitan satisfacer los requerimientos del sistema, para luego seleccionar la herramienta o conjunto de herramientas que utilizaremos como base para el software a desarrollar.
+
+\subsection{Análisis GAP}
+% Una vez seleccionado el software de base, debemos identificar y medir las diferencias entre lo que proporciona este software y los requisitos definidos% para el proyecto. El resultado de este análisis permitirá identificar cuáles de éstos requisitos ya están solventados total o parcialmente por el sistema base y cuales tendremos que diseñar e implementar.

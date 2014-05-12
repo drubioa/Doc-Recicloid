@@ -1,0 +1,48 @@
+% Tipo que representa USUARIOS
+
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{TYP-001: Usuario}} \\
+\hline
+\textbf{Versión} & 1.0 (31/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+% Descripción del Tipo
+\textbf{Descripción} & Este tipo de objetos representa  \textit{los usuarios que solicitan recogida de muebles o enseres} \\
+\textbf{Supertipo} & - \\
+\textbf{Subtipo} & -  \\
+\textbf{Comentarios} &- \\
+\end{longtable}
+
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Atributo variable} & Usuario::teléfono \\
+% Descripción del Atributo
+\textbf{Descripción} & Este atributo representa  \textit{el número de teléfono del usuario} \\
+\textbf{Tipo} & \textit{String} \\
+\textbf{Comentarios} & Este campo se empleará para identificar al usuario. El teléfono es un teléfono de móvil. En caso de que haya alguna incidencia se contactará a este número. \\
+\end{longtable}
+
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Atributo variable} & Usuario::Nombre \\
+% Descripción del Atributo
+\textbf{Descripción} & Este atributo representa  \textit{el nombre del solicitante del servicio de recogida y del titular del teléfono móvil.} \\
+\textbf{Tipo} & \textit{String} \\
+\textbf{Comentarios} &- \\
+\end{longtable}
+
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Atributo variable} & Usuario::Apellidos \\
+% Descripción 
+\textbf{Descripción} & Este atributo representa  \textit{los apellidos del solicitante del servicio de recogida y titular del teléfono móvil.} \\
+\textbf{Tipo} & \textit{String} \\
+\textbf{Comentarios} & Este campo es opcional \\
+\end{longtable}
+
+\begin{longtable}{p{3cm}  p{12cm}}
+\hline
+\textbf{Expresión de invariante} & Usuario de teléfono \\
+% Descripción 
+\textbf{Descripción} & No puede haber Usuarios con el mismo teléfono en el Sistema. \\
+\textbf{Comentarios} & - \\
+\end{longtable}

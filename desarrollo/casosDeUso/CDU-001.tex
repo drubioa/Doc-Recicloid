@@ -1,0 +1,59 @@
+% CDU-001: Solicitar recogida de muebles y ensere
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{CDU-001: Solicitar recogida de muebles y enseres}} \\
+\hline
+\textbf{Versión} & 1.0 (26/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+\textbf{Dependencias} & OBJ-001 CDU-002 \\
+% Descripción del caso de uso
+\textbf{Descripción} & El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando \textit{un usuario desee solicitar la recogida de uno o varios muebles y enseres.} \\
+\textbf{Frecuencia esperada} & 10 veces al día \\
+\textbf{Importancia} & Vital  \\
+\textbf{Comentarios} &- \\
+\end{longtable}
+
+\textbf{Secuencia Normal} 
+\begin{enumerate}
+	\item[1.] El actor \textit{Usuario (ACT-0001)} solicita al sistema la recogida de uno o varios muebles y enseres.
+	\item[2.] El \textit{Sistema} solicita al \textit{Usuario (ACT-0001)} que indique qué tipo de mueble o enser quiere depositar para su recogida, así como el volumen de dicho objeto.
+	% Excepción en el paso 3
+	\item[3.] El actor \textit{Usuario (ACT-0001)} indica qué tipo de mueble o enser va a depositar así como las características del mismo (Repetir este paso hasta que se hayan incluido todos los objetos que el actor \textit{Usuario (ACT-0001)} desea depositar para su posterior recogida).
+	\item[4.] Seleccionar punto donde se depositarán los muebles y enseres para su posterior recogida. \textbf{Include (Seleccionar punto de recogida)}
+
+	\item[5.] El \textit{Sistema} comprueba la primera fecha disponible para registrar la cita para recogida de los muebles y enseres.
+	% Excepción en el paso 6
+	\item[6.] El \textit{Sistema} comprueba si se han solicitado más del número máximo de objetos al día que se pueden recoger. Se han solicitado menos del número máximo de objetos por usuario al día que se pueden solicitar para que sean recogidas. Adicionalmente se comprueba si es posible dar respuesta a la recogida de objetos dentro del cupo de recogida 	diaria para dicha fecha. Se comprueba que es posible recoger todos los enseres en el mismo día.
+	\item[7.] El \textit{Sistema} muestra al usuario las instrucciones que debe seguir para depositar los muebles y enseres. Una vez mostradas muestra la fecha y localización de la recogida y solicita confirmación.
+	\item[8.] El actor \textit{Usuario (ACT-0001)} visualiza todas las instrucciones y confirma la recogida de muebles y enseres.
+	\item[9.] El \textit{Sistema} registra en el sistema la fecha de recogida y el número de enseres, así como la ubicación.
+	\item[10.] El \textit{Sistema} muestra al usuario una confirmación a la solicitud de recogida de muebles y enseres con la fecha y lugar donde serán recogidos.
+\end{enumerate} 
+
+\textbf{Postcondición: } 
+ Se registra la solicitud de recogida de muebles y enseres con la ubicación y fecha(s).\\
+
+\textbf{Excepciones} 
+\begin{enumerate}
+\item[*a.] El actor \textit{Usuario (ACT-0001)} cancela el proceso de solicitud de recogida de muebles y enseres.
+	\begin{enumerate}
+		\item[1.] El Sistema cancela el registro de la solicitud de recogida de muebles y enseres.
+	\end{enumerate}
+\item[3a.] El actor \textit{Usuario (ACT-0001)} desea solicitar la recogida de más de un mueble o enser.
+	\begin{enumerate}
+		 \item[1.] El actor \textit{Usuario (ACT-0001)} vuelve a indicar que tipo de mueble o enser va a depositar así como las características del mismo.
+		 \item[2.] EL \textit{Sistema} incluye el objeto en el listado de muebles y enseres que el usuario desea que sean recogidos para reciclar.
+		 \item[3.] EL \textit{Sistema} comprueba si se ha superado el máximo número de muebles y enseres que se pueden recoger por usuario al día. En caso afirmativo muestra un mensaje al usuario informando que el máximo número de objetos que se recogen por día es ese y que la recogida se hará en varias jornadas.
+	\end{enumerate}
+\item[3b.] El actor \textit{Usuario (ACT-0001)} desea solicitar la recogida de un mueble o enser que no esta en el listado de productos recogidas y cuyas características no se pueden indicar.
+	\begin{enumerate}
+		\item[1.] El \textit{Sistema} informa al usuario que debe ponerse en contacto con el número de teléfono de la empresa municipal (Se finaliza el caso de uso).
+	\end{enumerate}	
+\item[6a.] El \textit{Sistema} comprueba que no es posible dar servicio en un solo día a la petición del usuario al sobrepasar el número de objetos que pueden recogerse en un día o en el primer día disponible.
+	\begin{enumerate}
+		\item[1.] El Sistema organiza la recogida en varios días teniendo el cuenta el máximo número de objetos que se recogen por día y usuario y el número de objetos que se van a recoger en la primera fecha disponible. Vuelve al paso 11.
+	\end{enumerate}
+\item[9a.] El \textit{Sistema} no puede registrar  en el sistema la fecha de recogida y el número de enseres, así como la ubicación.
+	\begin{enumerate}
+		\item[1.] El \textit{Sistema} informa de que no ha sido posible resolver la solicitud del usuario y que debe ponerse en contacto con el Teléfono de contacto de la empresa de recogida de muebles y enseres.
+	\end{enumerate}
+\end{enumerate}

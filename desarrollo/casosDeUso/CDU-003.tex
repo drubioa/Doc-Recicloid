@@ -1,0 +1,32 @@
+% CDU-003: Consultar Historial de Peticiones de Recogida
+\begin{longtable}{p{2.5cm}  p{14cm}}
+\caption*{\textbf{CDU-003: Consultar Historial de Peticiones de Recogida}} \\
+\hline
+\textbf{Versión} & 1.0 (26/03/2014) \\
+\textbf{Fuentes} & Apresa21 \\
+\textbf{Dependencias} & OBJ-001 \\
+% Descripción del caso de uso
+\textbf{Descripción} & El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando \textit{un usuario desee consultar las peticiones de recogida de uno o varios muebles y enseres que ha solicitado anteriormente.} \\
+\textbf{Frecuencia esperada} & 1 veces a la semana  \\
+\textbf{Precondición} & El actor \textit{Usuario (ACT-0001)} ha realizado anteriormente una o varios solicitudes de recogida de mueble y enseres. \\
+\textbf{Importancia} & Baja  \\
+\textbf{Comentarios} &- \\
+\end{longtable}
+
+\textbf{Puntos de extensión:} 
+borrar en 3a. \\
+
+\textbf{Secuencia Normal} 
+\begin{enumerate}
+	\item[1.] El actor \textit{Usuario (ACT-0001)} desea consultar las solicitudes que ha realizado de recogida de muebles y enseres.
+	\item[2.] El sistema consulta las peticiones de recogida de muebles y enseres que tiene pendiente y las que ha realizado anteriormente y las muestra por pantalla.
+	\item[3] El actor \textit{Usuario (ACT-0001)} selecciona una petición para visualizar mas detalles.
+\end{enumerate}
+
+\textbf{Postcondición: } 
+ Se muestran por pantalla las peticiones de recogida de muebles y enseres que ha realizado el usuario.\\
+
+\textbf{Excepciones} 
+\begin{enumerate}
+	\item[3a.] El actor \textit{Usuario (ACT-0001)} desea cancelar una petición que ha solicitado y que aún está pendiente de resolución.
+\end{enumerate} 
